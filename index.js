@@ -1,5 +1,9 @@
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
+
+  return fetch("https://anapioficeandfire.com/api/books")
+  // I could have used "let request = new XMLHttpRequest(); request.open("Get, "https://anapioficeandfire.com/api/books); request.send" but the code would not read
+  .then(resp => resp.json())
+  .then(books=> renderBooks(books))
   
 }
 
